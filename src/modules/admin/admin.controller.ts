@@ -14,7 +14,9 @@ import { CreateAdminDto } from './dto/create-admin.dto';
 import { UpdateAdminDto } from './dto/update-admin.dto';
 import { PaginationQueryDto } from '../shared/pagination-query.dto';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { ApiBearerAuth, ApiQuery } from '@nestjs/swagger';
 
+@ApiBearerAuth()
 @Controller('admin')
 export class AdminController {
   constructor(private readonly service: AdminService) {}
@@ -25,6 +27,8 @@ export class AdminController {
   }
 
   @UseGuards(JwtAuthGuard)
+  @ApiQuery({ name: 'page', required: false, type: Number })
+  @ApiQuery({ name: 'limit', required: false, type: Number })
   @Get()
   findAll(@Query() query: PaginationQueryDto) {
     return this.service.findAll(Number(query.page), Number(query.limit));
