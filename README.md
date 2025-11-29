@@ -23,6 +23,9 @@
 
 ## Since this is just a simulation, I pushed the .env file to Git. However, in a real-world situation, this is not allowed because it is unsafe. People could access important data.
 
+## Build and Depoy using Railway
+https://nestjs-kepegawaian-production.up.railway.app/api-docs
+
 ## Project setup
 
 ```bash
