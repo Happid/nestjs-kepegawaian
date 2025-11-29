@@ -10,5 +10,5 @@ export const DatabaseConfig = () =>
     database: process.env.DB_NAME,
     autoLoadEntities: true,
     synchronize: process.env.NODE_ENV !== 'production',
-    logging: true,
+    logging: process.env.NODE_ENV !== 'production',
   });
