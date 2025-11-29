@@ -21,6 +21,8 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Since this is just a simulation, I pushed the .env file to Git. However, in a real-world situation, this is not allowed because it is unsafe. People could access important data.
+
 ## Project setup
 
 ```bash
